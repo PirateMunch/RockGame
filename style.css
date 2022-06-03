@@ -1,0 +1,52 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box
+}
+
+body{
+  font-family: roboto, sans-serif;
+}
+
+h1{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: 2px solid pink;
+    padding: 40px
+}
+
+.icons{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  margin: 20px;
+  border: 2px solid pink;
+}
+
+button {
+  display: flex;
+  background: #3882f6;
+  border: 1px solid #050a13;
+  color: #e5e7eb;
+  width: 130px;
+  border-radius: 10px;
+  justify-content: center;
+  align-content: center;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 12px;
+  gap: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: blueviolet;
+}
+.result{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid pink;
+}
