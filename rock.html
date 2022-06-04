@@ -3,11 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<scri>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>RockGame</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Rock game test</h1>
-    <script src="./rock.js"></script>
+    
+    <h3>Choose your weopon!</h3> 
+    <h4>Click a button below</h4>
+    
+    <div class="icons">
+        <button class="rockButton">rock</button>
+            <button class="paperButton">paper</button>
+            <button class="siscorsButton">siscors</button>
+    </div>
+    <div class="gameText" >
+               
+    </div>
+    <div class="gameScore">Game Score:</div>
+
+    <div class="box1">
+        <div class="playScore">
+            <p class="pText">player</p>
+            <p class="pScore">0</p>
+        </div>
+       <div class="computerScore">
+            <p class="cText">computer</p>
+            <p class="cScore">0</p>
+        </div>
+    </div>
+    <div class="restart">
+    <button class="playBtn">Restart</button>
+    </div>
+    <script src="./rock.js"></script>   
 </body>
 </html>

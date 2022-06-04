@@ -1,0 +1,139 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box
+}
+
+html, body{
+  font-family: roboto, sans-serif;
+  width: auto;
+  height: 100%;
+  background: rgb(233, 252, 199);
+}
+
+h1{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 30px
+}
+
+h3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+h4{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.icons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-between;
+  margin: 10px;
+  padding: 20px;
+  gap: 30px;
+}
+
+.gameText{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: x-large;
+  padding: 10px;
+  text-align: center;
+  font-weight: 800;
+  white-space: pre-line;
+  margin: 10px;
+
+}
+
+.gameScore{
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  padding: 20px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.box1{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center ;
+  font-size: larger;
+  height: 40px;
+  padding: 30px;
+  font-size: x-large;
+  font-weight: 700;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.playScore{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.computerScore{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.restart{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.playBtn{
+  display: flex;
+  border: 6px solid rgb(235, 62, 99);
+}
+
+button {
+  display: flex;
+  background: #3882f6;  
+  color: #e9eef7;
+  width: 130px;
+  border-radius: 10px;
+  justify-content: center;
+  align-content: center;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 12px;
+  gap: 8px;
+}
+
+button:active {
+  background-color: #050a13;
+}
+button:disabled {
+  background-color: aqua;
+}
+
+button:hover {
+  cursor: pointer;
+  background: blueviolet;
+}
