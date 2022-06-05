@@ -32,7 +32,7 @@ function rockPlays (computerSelection) {
     } else {
         playerScore+=1;
         playScorePrint.textContent =`${playerScore}` ;
-        gamePrint.textContent = "rock v siscors,\n You win!" ;
+        gamePrint.textContent = "rock v scissors,\n You win!" ;
     } gameOver();
     return;
 }
@@ -44,7 +44,7 @@ function paperPlays (computerSelection) {
     } else if (computerSelection === "siscors") {
         computerScore+=1;
         computerScorePrint.textContent =`${computerScore}` ;
-        gamePrint.textContent = "paper v siscors,\n Computer wins!" ;
+        gamePrint.textContent = "paper v scissors,\n Computer wins!" ;
     } else {
         playerScore+=1;
         playScorePrint.textContent =`${playerScore}` ;
@@ -56,15 +56,15 @@ function paperPlays (computerSelection) {
 function siscorsPlays (computerSelection) {
     computerSelection = computerPlays();
     if (computerSelection === "siscors") {
-        gamePrint.textContent = "siscors v siscors,\n it\'s a tie!" ;
+        gamePrint.textContent = "scissors v scissors,\n it\'s a tie!" ;
     } else if (computerSelection === "rock") {
         computerScore+=1;
         computerScorePrint.textContent =`${computerScore}` ;
-        gamePrint.textContent = "siscors v rock,\n Computer wins!" ;
+        gamePrint.textContent = "scissors v rock,\n Computer wins!" ;
     } else {
         playerScore+=1;
         playScorePrint.textContent =`${playerScore}` ;
-        gamePrint.textContent = "siscors v paper,\n You win!"
+        gamePrint.textContent = "scissors v paper,\n You win!"
     } gameOver();
     return;
 }
