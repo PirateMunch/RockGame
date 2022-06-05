@@ -8,7 +8,7 @@ html, body{
   font-family: roboto, sans-serif;
   width: auto;
   height: 100%;
-  background: rgb(233, 252, 199);
+  background: rgb(114, 253, 207);
 }
 
 h1{
@@ -24,6 +24,7 @@ h3{
   justify-content: center;
   align-content: center;
   text-align: center;
+  padding: 10px;
 }
 
 h4{
@@ -38,7 +39,6 @@ h4{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-content: space-between;
   margin: 10px;
   padding: 20px;
   gap: 30px;
@@ -54,7 +54,7 @@ h4{
   text-align: center;
   font-weight: 800;
   white-space: pre-line;
-  margin: 10px;
+  margin: 20px;
 
 }
 
@@ -111,29 +111,258 @@ h4{
   border: 6px solid rgb(235, 62, 99);
 }
 
-button {
+.rockButton{
   display: flex;
-  background: #3882f6;  
-  color: #e9eef7;
-  width: 130px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.paperButton{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.siscorsButton{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.rockButton:before {
+  content: '';
+  background: linear-gradient(
+    45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.rockButton:active {
+  color: #000;
+}
+
+.rockButton:active:after {
+  background: transparent;
+}
+
+.rockButton:hover:before {
+  opacity: 1;
+}
+
+.rockButton:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.paperButton:before {
+  content: '';
+  background: linear-gradient(
+    45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.paperButton:active {
+  color: #000;
+}
+
+.paperButton:active:after {
+  background: transparent;
+}
+
+.paperButton:hover:before {
+  opacity: 1;
+}
+
+.paperButton:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.siscorsButton:before {
+  content: '';
+  background: linear-gradient(
+    45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.siscorsButton:active {
+  color: #000;
+}
+
+.siscorsButton:active:after {
+  background: transparent;
+}
+
+.siscorsButton:hover:before {
+  opacity: 1;
+}
+
+.siscorsButton:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+.playBtn {
+  display: flex;
+  width: 300px;
+  height: 50px;
   border-radius: 10px;
   justify-content: center;
   align-content: center;
+  align-items: center;
   padding: 4px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 800;
   border: 12px;
   gap: 8px;
-}
-
-button:active {
-  background-color: #050a13;
-}
-button:disabled {
-  background-color: aqua;
-}
-
-button:hover {
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
   cursor: pointer;
-  background: blueviolet;
+  position: relative;
+  z-index: 0;
 }
+
+.playBtn:before {
+  content: '';
+  background: linear-gradient(
+    45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.playBtn:active {
+  color: #000;
+}
+
+.playBtn:active:after {
+  background: transparent;
+}
+
+.playBtn:hover:before {
+  opacity: 1;
+}
+
+.playBtn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
