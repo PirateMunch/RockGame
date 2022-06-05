@@ -13,3 +13,5 @@ to do::
 3) make <div gameText> render even before text is there (stop the screen jump)
 4) make the buttons/images better, ideally a uniformed size.
 5) more style to the Win/Lose <box1>.
+
+## images wouldnt load until i used the dev tools to find a solution.  add'ing /tree/main/ to the <src> worked. (so they refrence github location)
