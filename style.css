@@ -6,16 +6,46 @@ box-sizing: border-box
 
 html, body{
   font-family: roboto, sans-serif;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   background: rgb(114, 253, 207);
 }
 
-h1{
+header{
     display: flex;
+    flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
-    padding: 30px
+    font-size: 50px;
+    font-weight: 900;
+    width: 100%;
+    height: 140px;
+    margin-top: 8%;
+}
+
+.span1{
+  color: brown;
+}
+
+.span2{
+  color: blueviolet;
+}
+
+.span3{
+  color: darkgreen;
+}
+
+footer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 6%;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  min-width: 550px;
 }
 
 h3{
@@ -25,6 +55,8 @@ h3{
   align-content: center;
   text-align: center;
   padding: 10px;
+  width: 100%;
+  font-size: xx-large;
 }
 
 h4{
@@ -33,15 +65,19 @@ h4{
   justify-content: center;
   align-content: center;
   text-align: center;
+  width: 100%;
+  font-size: x-large;
+  padding: 10px;
 }
 
 .icons{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 10px;
   padding: 20px;
   gap: 30px;
+  width: 100%;
 }
 
 .gameText{
@@ -49,35 +85,38 @@ h4{
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  font-size: x-large;
+  font-size: 40px;
   padding: 10px;
   text-align: center;
   font-weight: 800;
   white-space: pre-line;
   margin: 20px;
+  width: 100%;
 
 }
 
 .gameScore{
   display: flex;
   justify-content: center;
-  font-size: x-large;
+  align-content: center;
+  font-size: xx-large;
   padding: 20px;
   font-weight: 600;
   margin: 10px;
+  width: 100%;
 }
 
 .box1{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center ;
   font-size: larger;
-  height: 40px;
   padding: 30px;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: 700;
   text-align: center;
   white-space: pre-line;
+  width: 100%;
 }
 
 .playScore{
@@ -104,11 +143,7 @@ h4{
   align-items: center;
   padding: 20px;
   text-align: center;
-}
-
-.playBtn{
-  display: flex;
-  border: 6px solid rgb(235, 62, 99);
+  width: 100%;
 }
 
 .rockButton{
@@ -120,13 +155,14 @@ h4{
   border: none;
   outline: none;
   color: #fff;
-  background: #111;
+  background: brown;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
   font-size: larger;
   font-weight: 600;
+  width: 22%;
 }
 
 .paperButton{
@@ -138,13 +174,14 @@ h4{
   border: none;
   outline: none;
   color: #fff;
-  background: #111;
+  background: blueviolet;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
   font-size: larger;
   font-weight: 600;
+  width: 22%;
 }
 
 .siscorsButton{
@@ -156,13 +193,14 @@ h4{
   border: none;
   outline: none;
   color: #fff;
-  background: #111;
+  background: darkgreen;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 10px;
   font-size: larger;
   font-weight: 600;
+  width: 22%;
 }
 
 .rockButton:before {
@@ -185,7 +223,7 @@ h4{
 }
 
 .rockButton:active {
-  color: #000;
+  color: brown;
 }
 
 .rockButton:active:after {
@@ -202,7 +240,7 @@ h4{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: rgb(97, 5, 5);
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -228,7 +266,7 @@ h4{
 }
 
 .paperButton:active {
-  color: #000;
+  color: blueviolet;
 }
 
 .paperButton:active:after {
@@ -245,7 +283,7 @@ h4{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: blueviolet;
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -271,7 +309,7 @@ h4{
 }
 
 .siscorsButton:active {
-  color: #000;
+  color: darkgreen;
 }
 
 .siscorsButton:active:after {
@@ -288,7 +326,7 @@ h4{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: darkgreen;
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -303,7 +341,7 @@ h4{
 
 .playBtn {
   display: flex;
-  width: 300px;
+  width: 65%;
   height: 50px;
   border-radius: 10px;
   justify-content: center;
@@ -317,7 +355,7 @@ h4{
   border: none;
   outline: none;
   color: #fff;
-  background: #111;
+  background: darkblue;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -343,7 +381,7 @@ h4{
 }
 
 .playBtn:active {
-  color: #000;
+  color: darkblue;
 }
 
 .playBtn:active:after {
@@ -360,9 +398,17 @@ h4{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: darkblue;
   left: 0;
   top: 0;
   border-radius: 10px;
 }
 
+.buttons { 
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.buttons button { 
+  width: 100%;
+}
