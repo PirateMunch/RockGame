@@ -110,3 +110,14 @@ let playerPrint = document.querySelector('.pText');
 let computerPrint = document.querySelector('.cText');
 
 let gamePrint = document.querySelector('.gameText')
+
+//set CSS variable for mobile screens
+const resizeOps = () => {
+    document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+  };
+  resizeOps();
+  window.addEventListener("resize", resizeOps);
+
+var siteWidth = 1280;
+var scale = screen.width /siteWidth;
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
