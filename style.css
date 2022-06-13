@@ -1,38 +1,39 @@
 html, body {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  font-size: 15px;
+  height:auto!important;
+  min-height:100vh;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
   @media only screen and (max-width: 800px) {
     html {
-      font-size: 10px;
-      height: calc(var(--vh, 1vh) * 100)
+      
+      min-height:100%;
+      max-width: 100%;
     }
   }
 
   @media only screen and (max-width: 550px) {
     html {
-      font-size: 8px;
-      height: calc(var(--vh, 1vh) * 100)
+      height:auto;
+      min-height: 100vh;
+
     }
   }
 
   @media only screen and (max-width: 450px) {
     html {
-      font-size: 7px;
-      height: calc(var(--vh, 1vh) * 100)
+      height:auto;
+      min-height: 100vh;
     }
 
   }
 /*background animation smooth gradiant*/
   body {
-    height: 100%;
-    margin: 0;
     color: black;
     background: linear-gradient(-45deg, #d3fd85, #52f506, #fcaf58, #f1ef78);
     background-size: 400% 400%;
@@ -54,14 +55,12 @@ html, body {
 
 header{
     display: flex;
-    flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
-    font-size: 50px;
+    font-size: 10vw;
     font-weight: 900;
-    width: 100%;
-    height: 140px;
-    margin-top: 8%;
+    max-width: 100%;
+    margin-top: 4vw;
 }
 
 .span1{
@@ -78,15 +77,17 @@ header{
 
 footer {
   display: flex;
-  align-content: center;
   justify-content: center;
-  padding: 6%;
+  position: fixed;
+  max-width: 100%;
   width: 100%;
+  bottom: 0;
+  height: 4vw;
 }
 
 .container {
   width: 100%;
-  min-width: 550px;
+  max-width: 100%;
 }
 
 h3{
@@ -95,9 +96,10 @@ h3{
   justify-content: center;
   align-content: center;
   text-align: center;
-  padding: 10px;
+  margin-top: 7vw;
   width: 100%;
-  font-size: xx-large;
+  font-size: 5vw;
+  max-width: 100%;
 }
 
 h4{
@@ -107,18 +109,19 @@ h4{
   align-content: center;
   text-align: center;
   width: 100%;
-  font-size: x-large;
-  padding: 10px;
+  font-size: 9vw;
+  margin-top: 8vw;
+  max-width: 100%;
 }
 
 .icons{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 10px;
-  padding: 20px;
-  gap: 30px;
   width: 100%;
+  max-width: 100%;
+  margin-top: 10vw;
+  gap: 4vw;
 }
 
 .gameText{
@@ -126,38 +129,45 @@ h4{
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  font-size: 40px;
-  padding: 10px;
+  font-size: 8vw;
   text-align: center;
   font-weight: 800;
   white-space: pre-line;
-  margin: 20px;
+  margin-top: 8vw;
+  margin-bottom: 5vw;
   width: 100%;
-
+  max-width: 100%;
+  color: white;
 }
 
+p{
+  margin: 0;
+}
 .gameScore{
   display: flex;
   justify-content: center;
   align-content: center;
-  font-size: xx-large;
-  padding: 20px;
+  font-size: 12vw;
   font-weight: 600;
-  margin: 10px;
   width: 100%;
+  max-width: 100%;
+  color: #002bff;
 }
 
 .box1{
   display: flex;
   justify-content: space-around;
   align-items: center ;
-  font-size: larger;
-  padding: 30px;
-  font-size: xx-large;
+  font-size: 8vw;
   font-weight: 700;
   text-align: center;
   white-space: pre-line;
   width: 100%;
+  max-width: 100%;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  color: white;
+
 }
 
 .playScore{
@@ -165,7 +175,7 @@ h4{
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: 10px;
+  max-width: 100%;
 }
 
 .computerScore{
@@ -174,7 +184,7 @@ h4{
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  gap: 10px;
+  max-width: 100%;
 }
 
 .restart{
@@ -182,9 +192,13 @@ h4{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   text-align: center;
   width: 100%;
+  max-width: 100%;
+}
+
+img{
+  max-width: 100%;
 }
 
 .rockButton{
@@ -203,7 +217,8 @@ h4{
   border-radius: 10px;
   font-size: larger;
   font-weight: 600;
-  width: 22%;
+  width: 40%;
+  max-width: 100%;
 }
 
 .paperButton{
@@ -222,7 +237,8 @@ h4{
   border-radius: 10px;
   font-size: larger;
   font-weight: 600;
-  width: 22%;
+  width: 40%;
+  max-width: 100%;
 }
 
 .siscorsButton{
@@ -241,9 +257,11 @@ h4{
   border-radius: 10px;
   font-size: larger;
   font-weight: 600;
-  width: 22%;
+  width: 40%;
+  max-width: 100%;
 }
 
+/* button animations*/
 .rockButton:before {
   content: '';
   background: linear-gradient(
@@ -379,20 +397,21 @@ h4{
   50% {background-position: 400% 0;}
   100% {background-position: 0 0;}
 }
+/*end of button animations*/
 
 .playBtn {
   display: flex;
   width: 65%;
-  height: 50px;
+  height: 8vw;
   border-radius: 10px;
   justify-content: center;
   align-content: center;
   align-items: center;
-  padding: 4px;
-  font-size: 24px;
+  padding: 2vw;
+  font-size: 4vw;
   font-weight: 800;
   border: 12px;
-  gap: 8px;
+  gap: 3vw;
   border: none;
   outline: none;
   color: #fff;
@@ -400,6 +419,7 @@ h4{
   cursor: pointer;
   position: relative;
   z-index: 0;
+  max-width: 100%;
 }
 
 .playBtn:before {
